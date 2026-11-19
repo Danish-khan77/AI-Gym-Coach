@@ -13,6 +13,7 @@ from detectors.biceps_curl import BicepsCurlDetector
 from detectors.shoulder_press import ShoulderPressDetector
 from detectors.lunges import LungesDetector
 from services.config.workout_config import POSE_CONNECTIONS
+from pathlib import Path
 
 
 class VideoProcessorclass(VideoProcessorBase):
@@ -21,8 +22,13 @@ class VideoProcessorclass(VideoProcessorBase):
         self._latest_metrics = None
         self._exercise_type = "Squats"
 
-        model_path = os.path.join(os.getcwd(), "ml_models", "pose_landmarker_full.task")
-        base_options = python.BaseOptions(model_asset_path=model_path)
+        BASE_DIR = Path(__file__).resolve().parents[2]
+        model_path = BASE_DIR / "ml_models" / "pose_landmarker_full.task"
+
+        if not model_path.exists():
+            raise FileNotFoundError(f"Model file not found: {model_path}")
+
+        base_options = python.BaseOptions(model_asset_path=str(model_path))
 
         options = vision.PoseLandmarkerOptions(
             base_options=base_options,
