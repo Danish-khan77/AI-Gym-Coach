@@ -2,14 +2,14 @@
 
 ### Your Personal AI-Powered Real-Time Fitness Trainer
 
-
-
-\
-
+[![Landing Page](https://img.shields.io/badge/Landing_Page-Live-00C853?style=for-the-badge&logo=netlify&logoColor=white)](https://aigymcoach77.netlify.app/)
+[![Live Application](https://img.shields.io/badge/AI_Gym_Coach-Try_Now-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://gym-coachai.streamlit.app/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Framework-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
 
 **AI Gym Coach** is an intelligent, computer-vision-powered fitness application that transforms your webcam into a personal AI fitness trainer.
 
-It uses real-time human pose estimation to analyze exercise movements, count repetitions, track workout progress, and provide intelligent voice-based coaching feedback.
+It uses real-time human pose estimation to analyze exercise movements, count repetitions, track workout progress, and provide AI-powered voice coaching feedback.
 
 Whether you're performing squats, push-ups, or dumbbell exercises, AI Gym Coach helps you monitor your movements and improve your workout experience without requiring expensive fitness equipment.
 
@@ -19,67 +19,61 @@ Whether you're performing squats, push-ups, or dumbbell exercises, AI Gym Coach 
 
 Experience AI Gym Coach through the following links:
 
-| Platform                 | Link                                                            |
-| ------------------------ | --------------------------------------------------------------- |
-| 🌍 Official Landing Page | [aigymcoach77.netlify.app](https://aigymcoach77.netlify.app/)   |
-| 🏋️ Live AI Application  | [gym-coachai.streamlit.app](https://gym-coachai.streamlit.app/) |
+| Platform | Link |
+|---|---|
+| 🌍 Official Landing Page | [Visit Website](https://aigymcoach77.netlify.app/) |
+| 🏋️ Live AI Application | [Launch Application](https://gym-coachai.streamlit.app/) |
 
-**How to use:**
+### How to Use
 
-1. Visit the landing page.
-2. Launch the live application.
+1. Visit the official landing page.
+2. Click on **Try it Live** to launch the application.
 3. Log in to access the workout dashboard.
 4. Select your exercise and configure sets and repetitions.
-5. Allow camera access and position yourself in front of the camera.
-6. Start your workout and receive real-time tracking and coaching feedback.
+5. Allow camera permissions.
+6. Position yourself in front of the camera.
+7. Start your workout and experience real-time exercise tracking and coaching.
 
 ---
 
 ## ✨ Key Features
 
 ### 🎥 1. Real-Time Pose Detection
-
 - Webcam-based exercise monitoring.
 - Human body landmark detection using MediaPipe.
 - Real-time movement and posture analysis.
 - Visual pose tracking.
 
 ### 🔢 2. Automatic Rep & Set Counting
-
 - Automatically counts exercise repetitions.
 - Tracks completed sets.
 - Monitors repetitions within the current set.
 - Maintains workout progress in real time.
 
 ### 📐 3. Exercise Form Analysis
-
 - Analyzes body movements and joint angles.
 - Tracks exercise-specific movement patterns.
 - Helps identify incorrect exercise positioning.
 - Provides feedback to improve exercise technique.
 
 ### 🤖 4. AI-Powered Voice Coaching
-
 - Integrates an LLM through the Groq API.
 - Generates contextual workout feedback.
 - Provides voice-based coaching using Google Text-to-Speech (gTTS).
 - Helps users stay informed during workouts.
 
 ### 📊 5. Workout Tracking
-
 - Tracks repetitions and sets.
 - Maintains workout session metrics.
 - Stores exercise information using SQLite.
 - Provides a structured workout experience.
 
 ### 🔐 6. User Authentication
-
 - Login interface.
 - User-specific workout sessions.
 - Persistent workout data storage.
 
 ### 🎨 7. Interactive User Interface
-
 - Custom Streamlit dashboard.
 - Dedicated landing page.
 - Workout configuration controls.
@@ -91,33 +85,33 @@ Experience AI Gym Coach through the following links:
 
 The application currently supports the following exercises:
 
-| Exercise                | Tracking                           |
-| ----------------------- | ---------------------------------- |
-| Squats                  | Rep counting and movement analysis |
-| Push-ups                | Rep counting and posture tracking  |
-| Biceps Curls (Dumbbell) | Arm movement and rep counting      |
-| Shoulder Press          | Arm movement and rep tracking      |
-| Lunges                  | Lower-body movement tracking       |
+| Exercise | Tracking |
+|---|---|
+| Squats | Rep counting and movement analysis |
+| Push-ups | Rep counting and posture tracking |
+| Biceps Curls (Dumbbell) | Arm movement and rep counting |
+| Shoulder Press | Arm movement and rep tracking |
+| Lunges | Lower-body movement tracking |
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Category                  | Technologies                 |
-| ------------------------- | ---------------------------- |
-| Programming Language      | Python                       |
-| Application Framework     | Streamlit                    |
-| Real-Time Video Streaming | Streamlit WebRTC             |
-| Computer Vision           | OpenCV                       |
-| Pose Estimation           | MediaPipe Tasks              |
-| AI / LLM Integration      | Groq API                     |
-| Text-to-Speech            | Google Text-to-Speech (gTTS) |
-| Database                  | SQLite                       |
-| Data Processing           | NumPy, Pandas                |
-| Environment Management    | python-dotenv                |
-| Landing Page Hosting      | Netlify                      |
-| Application Hosting       | Streamlit Community Cloud    |
-| Version Control           | Git & GitHub                 |
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Application Framework | Streamlit |
+| Real-Time Video Streaming | Streamlit WebRTC |
+| Computer Vision | OpenCV |
+| Pose Estimation | MediaPipe Tasks |
+| AI / LLM Integration | Groq API |
+| Text-to-Speech | Google Text-to-Speech (gTTS) |
+| Database | SQLite |
+| Data Processing | NumPy, Pandas |
+| Environment Management | python-dotenv |
+| Landing Page Hosting | Netlify |
+| Application Hosting | Streamlit Community Cloud |
+| Version Control | Git & GitHub |
 
 ---
 
@@ -128,48 +122,47 @@ AI Gym Coach combines computer vision, pose estimation, movement analysis, and g
 ### System Workflow
 
 ```text
-       USER
-         |
-         v
-   WEBCAM INPUT
-         |
-         v
-  REAL-TIME VIDEO
-      STREAMING
-         |
-         v
-  MEDIAPIPE POSE
-    DETECTION
-         |
-         v
-  BODY LANDMARK
-    EXTRACTION
-         |
-         v
-  JOINT ANGLE &
-  MOVEMENT ANALYSIS
-         |
-         v
-  EXERCISE-SPECIFIC
-     DETECTION
-         |
-         v
-  REP & SET COUNTING
-         |
-         v
-   WORKOUT METRICS
-         |
-         v
-   AI COACHING
-    (GROQ API)
-         |
-         v
-   TEXT-TO-SPEECH
-       (gTTS)
-         |
-         v
-  REAL-TIME VOICE
-     FEEDBACK
+             USER
+               |
+               v
+         WEBCAM INPUT
+               |
+               v
+      REAL-TIME VIDEO STREAM
+               |
+               v
+       MEDIAPIPE POSE
+          DETECTION
+               |
+               v
+       BODY LANDMARK
+         EXTRACTION
+               |
+               v
+        JOINT ANGLE &
+       MOVEMENT ANALYSIS
+               |
+               v
+      EXERCISE-SPECIFIC
+          DETECTION
+               |
+               v
+       REP & SET COUNTING
+               |
+               v
+        WORKOUT METRICS
+               |
+               v
+         AI COACHING
+          (GROQ API)
+               |
+               v
+        TEXT-TO-SPEECH
+            (gTTS)
+               |
+               v
+       REAL-TIME VOICE
+           FEEDBACK
 ```
 
 ### Technical Workflow
@@ -214,7 +207,7 @@ cd YOUR_REPOSITORY
 
 ### 2. Navigate to the Main Application
 
-Open the main application directory containing `main.py` and `requirements.txt`.
+Open the application directory containing `main.py` and `requirements.txt`.
 
 ### 3. Create a Virtual Environment
 
@@ -248,7 +241,7 @@ Create a `.env` file and configure your Groq API key:
 GROQ_API_KEY=your_groq_api_key
 ```
 
-Never upload your actual API keys or secret credentials to GitHub.
+**Important:** Never upload your actual API keys or secret credentials to GitHub.
 
 For deployed applications, configure secrets through the hosting platform.
 
@@ -270,16 +263,14 @@ Allow webcam permissions when prompted.
 
 ## 🔊 AI & Voice Coaching
 
-The application integrates two technologies for interactive voice-based coaching:
+The application integrates two technologies for interactive voice-based coaching.
 
-**Groq API**
-
+### Groq API
 - Generates AI-powered workout feedback.
 - Provides contextual coaching responses.
 - Supports intelligent interaction during workouts.
 
-**Google Text-to-Speech (gTTS)**
-
+### Google Text-to-Speech (gTTS)
 - Converts coaching messages into audio.
 - Provides spoken feedback.
 - Makes workout interaction more convenient.
@@ -305,13 +296,13 @@ SQLite provides a simple database solution without requiring a separate database
 
 The project uses separate hosting platforms for the landing page and the main application.
 
-| Component           | Platform                  | Deployment                                               |
-| ------------------- | ------------------------- | -------------------------------------------------------- |
-| Landing Page        | Netlify                   | [Visit Website](https://aigymcoach77.netlify.app/)       |
+| Component | Platform | Link |
+|---|---|---|
+| Landing Page | Netlify | [Visit Website](https://aigymcoach77.netlify.app/) |
 | Main AI Application | Streamlit Community Cloud | [Launch Application](https://gym-coachai.streamlit.app/) |
-| Source Code         | GitHub                    | Repository                                               |
+| Source Code | GitHub | Repository |
 
-The landing page acts as the project's public-facing website, while the Streamlit application handles the actual AI-powered workout functionality.
+The landing page acts as the project's public-facing website, while the Streamlit application handles the AI-powered workout functionality.
 
 ---
 
@@ -320,6 +311,7 @@ The landing page acts as the project's public-facing website, while the Streamli
 - Camera access requires browser permission.
 - API keys should be stored securely using environment variables or deployment secrets.
 - Sensitive credentials should never be committed to version control.
+- Users should ensure they have sufficient space and lighting for accurate pose detection.
 
 ---
 
@@ -365,4 +357,8 @@ Your support and feedback are appreciated!
 
 ---
 
-\<p align="center">   \<b>AI Gym Coach — Your Form. Analyzed. Corrected. In Real Time.\</b>   \<br/>   Built with ❤️ using Python, Computer Vision and Generative AI. \</p>
+<p align="center">
+  <b>AI Gym Coach — Your Form. Analyzed. Corrected. In Real Time.</b>
+  <br/>
+  Built with ❤️ using Python, Computer Vision and Generative AI.
+</p>
